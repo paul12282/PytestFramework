@@ -7,9 +7,11 @@ class LoginStep:
         self.driver=driver
 
     def setEmail(self,email):
+        self.driver.find_element_by_id(self.email_id).clear()
         self.driver.find_element_by_id(self.email_id).send_keys(email)
 
     def setPassword(self,password):
+        self.driver.find_element_by_id(self.password_id).clear()
         self.driver.find_element_by_id(self.password_id).send_keys(password)
 
     def clickLogin(self):
